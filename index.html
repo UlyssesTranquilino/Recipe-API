@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #fbf6e9;
+        --color-lightGreen: #e3f0af;
+        --color-greenAccent: #118b50;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="./assets/Logo TastyTrove.png" />
+
+    <title>TastyTrove</title>
+  </head>
+  <body>
+    <nav class="p-3 shadow-md flex items-center gap-1 md:pl-5">
+      <img
+        src="./assets/Logo TastyTrove.png"
+        alt="TastyTrove Logo"
+        class="w-10 sm:w-13"
+      />
+      <h1 class="font-semibold text-lg sm:text-xl text-clifford">TastyTrove</h1>
+    </nav>
+    <div class="searchPage">
+      <div class="p-4">
+        <h1
+          class="relative text-2xl md:text-3xl lg:text-4xl font-semibold mb-4"
+        >
+          Discover Delicious Recipes
+        </h1>
+        <div
+          class="bg-white rounded-sm flex items-center justify-between text-sm mt-5"
+        >
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a delicious recipe..."
+            class="text-black outline-0 pl-3 w-full"
+          />
+          <button
+            class="bg-greenAccent hover:bg-[#108b50] p-2 rounded-r-sm cursor-pointer"
+            onclick="searchRecipe()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="singleRecipe" class="mt-10 px-3 max-w-[800px] mx-auto"></div>
+
+    <div class="mt-20 px-3 max-w-[1000px] mx-auto">
+      <h1 class="text-center font-semibold text-xl md:text-2xl lg:text-3xl">
+        Categories
+      </h1>
+
+      <div class="categories mt-10 px-3 flex flex-wrap gap-2">
+        <button id="beef" class="active-category">Beef</button>
+        <button id="chicken" class="default-category">Chicken</button>
+        <button id="dessert" class="default-category">Dessert</button>
+        <button id="lamb" class="default-category">Lamb</button>
+        <button id="miscellaneous" class="default-category">
+          Miscellaneous
+        </button>
+        <button id="pasta" class="default-category">Pasta</button>
+        <button id="pork" class="default-category">Pork</button>
+        <button id="seafood" class="default-category">Seafood</button>
+        <button id="side" class="default-category">Side</button>
+        <button id="vegetarian" class="default-category">Vegetarian</button>
+      </div>
+
+      <div id="data" class="grid grid-cols-2 md:grid-cols-4 gap-5 my-10"></div>
+    </div>
+
+    <footer
+      class="bg-lightGreen p-3 shadow-md flex flex-col items-center mt-20"
+    >
+      <img
+        src="./assets/Logo TastyTrove.png"
+        alt="TastyTrove Logo"
+        class="w-10 sm:w-13"
+      />
+      <h1 class="font-semibold text-lg sm:text-xl text-clifford">TastyTrove</h1>
+      <p class="text-gray-480 text-xs">@2025</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
