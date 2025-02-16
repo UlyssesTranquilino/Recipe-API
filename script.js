@@ -227,9 +227,11 @@ function displaySingleRecipe(recipeData) {
     ${youtubeEmbed} <!-- Only added if there's a valid tutorial -->
 
 <h3 class="mt-10 text-lg font-semibold">Source:</h3> 
+<p>
 <a href="${recipe.strSource}" target="_blank" class="text-blue-500 underline">
   ${recipe.strSource ? recipe.strSource : "Not available"}
 </a>
+</p>
 
   `;
 }
