@@ -18,6 +18,6 @@ This project is a **JavaScript-based recipe application** that fetches meal reci
 - **TheMealDB API** – Data source  
 
 ## 🚀 Live Demo
-[(https://tasty-trove.netlify.app/)](https://tasty-trove.netlify.app/)](https://tasty-trove.netlify.app/)
+https://tasty-trove.netlify.app/
 ---
 
